@@ -15,7 +15,8 @@ before_script:
   - gem install coveralls-lcov
   - cd parkcore_app
 script:
-  - ../flutter/bin/flutter test --coverage test/*
+  - ../flutter/bin/flutter test --coverage --no-test-assets
+  - ../flutter/bin/flutter test 
 after_success:
   - coveralls-lcov coverage/lcov.info
 cache:
